@@ -1,11 +1,12 @@
 #!/bin/bash
+#include <stdio.h>
 
-# Define the input C file
-CFILE="your_c_file.c"
-
-# Define the output file
-OUTPUT_FILE="c"
-
-# Run the C file through the preprocessor and save the result
-cpp -P "$CFILE" > "$OUTPUT_FILE"
-
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
+}
