@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c c -o obj/c.o
+gcc -c $CFILE > ${CFILE::-2}".o"
