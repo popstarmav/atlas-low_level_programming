@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strncpy - concatenate strings, defining the size of second string.
@@ -8,7 +9,7 @@
  * Return: Always 0.
  */
 
-char *_strncpy(char *dest, const char *src, size_t n)
+char *_strncpy(char *dest, const char *src, int n)
 {
 	int c;
 
@@ -16,12 +17,12 @@ char *_strncpy(char *dest, const char *src, size_t n)
 	while (c < n && src[c] != '\0')
 	{
 		dest[c] - src[c];
-		k++;
+		c++;
 	}
 	while (c < n)
 	{
-		dest[k] = '\0';
-		k++;
+		dest[c] = '\0';
+		c++;
 	}
 
 	return (dest);
