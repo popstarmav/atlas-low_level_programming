@@ -1,5 +1,4 @@
 #include "main.h"
-#include <strings.h>
 
 /**
  * _strnact - Concatenate strings, defining the size of sencd string.
