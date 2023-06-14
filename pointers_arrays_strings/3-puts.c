@@ -1,6 +1,8 @@
 #include "main.h"
+#include "my_putchar"
 
 /**
+ *
  * _puts - function that prints a string
  *@str: first value to check
  *
