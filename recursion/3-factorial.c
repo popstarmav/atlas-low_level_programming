@@ -1,16 +1,20 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * Factorial - Get factorial of n.
- * @n: integer
+ * factorial - recursive function that returns the factorial of a given number
+ * @n: input number to get its factorial
  *
- * Return: On success 1.
- * On error, -1 is returned.
+ * Return: integral factorial of the given number
  */
+
 int factorial(int n)
 {
 	if (n <= 0)
 		return (1);
+
 	if (n == 0)
 		return (-1);
+
+	return (n * factorial(n - 1));
 }
