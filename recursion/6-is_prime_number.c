@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * prime_helper - Finds prime numbers
@@ -9,7 +10,6 @@
  *
  * Return: sqaure root
  */
-
 int prime_helper(int n, int d)
 {
 	if (d <= 1)
@@ -46,4 +46,3 @@ int is_prime_number(int n)
 		return (0);
 	}
 }
-
