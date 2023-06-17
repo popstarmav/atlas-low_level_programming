@@ -12,7 +12,7 @@
 
 int prime_helper(int n, int d)
 {
-	if (d >= 1)
+	if (d <= 1)
 	{
 		return (1);
 	}
@@ -22,7 +22,13 @@ int prime_helper(int n, int d)
 	}
 	return (prime_helper(n, d - 1));
 }
-
+/**
+ * is_prime_number - Returns 1 if the input integer is a prime, otherwise 0.
+ *
+ * @n: int arg
+ *
+ * Return: sqaure root
+ */
 int is_prime_number(int n)
 {
 	if (n <= 1)
@@ -30,13 +36,14 @@ int is_prime_number(int n)
 		return (0);
 	}
 
-	for (int i = 2; i <= n / 2; i++)
+	if (n == 2)
 	{
-		if (n % i == 0)
-		{
-			return (0);
-		}
+		return (1);
 	}
 
-	return (1);
+	if (n % 2 == 0)
+	{
+		return (0);
+	}
 }
+
