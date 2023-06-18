@@ -1,11 +1,13 @@
 #!/bin/bash
 
-# Get all the .c files in the current directory
-c_files=$(ls *.c)
-
 # Comile each .c file into an object file
-for file in $c_files; do
-	gcc - c "$file"
+for file in *.c; do
+	if gcc -c "$file"; then
+		echo "Compilation successful: $file"
+	else
+		echo "Compilation failed: $file"
+		exit 1 
+	fi 
 done
 
 # Create the static library using ar command
