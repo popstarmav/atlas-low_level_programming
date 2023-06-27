@@ -25,3 +25,28 @@ char *create_array(unsigned int size, char c)
 
 	return (s);
 }
+
+/**
+ * main - Entry point of the program
+ *
+ * Return: ALways 0.
+ */
+int main(void)
+{
+	unsigned int size = 5;
+	char c = 'A';
+
+	char *my_array = create_array(size, c);
+
+	if (my_array != NULL)
+	{
+		printf("Array: %s\n", my_array);
+		free(my_array);
+	}
+	else
+	{
+		printf("Failed to create the array. \n");
+	}
+
+	return (0);
+}
