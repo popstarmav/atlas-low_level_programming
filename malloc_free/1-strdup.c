@@ -3,6 +3,23 @@
 #include <string.h>
 
 /**
+ * _strlen - return length of a string
+ *
+ * @s: char type
+ * Return:  length of string
+ */
+int _strlen(char *s)
+{
+	int a;
+
+	for (a = 0; s[a] != '\0'; a++)
+	{
+
+	}
+	return (a);
+}
+
+/**
  * _strdup - Duplicate a string
  * @str: The string to be duplicated
  *
@@ -11,19 +28,14 @@
 
 char *_strdup(char *str)
 {
+	char *copy;
+	int i, len = 0;
+
 	if (str == NULL)
-	{
 		return (NULL);
-	}
 
-	size_t length = strlen(str) + 1;
+	while (str[len] != '\0')
+		len++;
 
-	char *new_str = (char *)malloc(length);
-
-	if (new_str != NULL)
-	{
-		strcpy(new_str, str);
-	}
-
-	return (new_str);
+	copy = (char *)malloc((sizeof(char) * len) + 1);
 }
