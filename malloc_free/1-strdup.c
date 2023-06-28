@@ -6,7 +6,7 @@
  * _strdup - Duplicate a string
  * @str: The string to be duplicated
  *
- * Return: NULL
+ * Return: the string
  */
 
 char *_strdup(char *str)
@@ -16,17 +16,14 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	size_t (length) = strlen(str);
+	size_t length = strlen(str) + 1;
 
-	char *duplicate = (char *)malloc((length + 1) * sizeof(char));
+	char *new_str = (char *)malloc(length);
 
-	if (duplicate == NULL)
+	if (new_str != NULL)
 	{
-		return (NULL);
+		strcpy(new_str, str);
 	}
 
-	strcpy (duplicate, str);
-
-	return (duplicate);
-
+	return (new_str);
 }
