@@ -59,3 +59,25 @@ char *str_concat(char *s1, char *s2)
 
 	return (concatenated);
 }
+
+/**
+ * main - check the code.
+ *
+ * Retuen: Always 0.
+ */
+
+int main(void)
+{
+	char *s;
+
+	s = str_concat("Best ", "School");
+	if (s == NULL)
+	{
+		printf("Memory allocarion failed.\n");
+		return (1);
+	}
+
+	printf("%s\n", s);
+	free(s);
+	return (0);
+}
