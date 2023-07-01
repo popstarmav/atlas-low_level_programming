@@ -1,7 +1,7 @@
-#ifndef "main.h"
-#define "main.h"
+#ifndef MAIN_H
+#define MAIN_H
 
-int addNumbers(int a int b);
+int addNumbers(int a, int b);
 
 void greetUser();
 
@@ -19,4 +19,4 @@ extern int globalVariable;
 
 #define PI 3.14159
 
-#endif /*main.h*/
+#endif /* MAIN_H */

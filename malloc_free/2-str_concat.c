@@ -19,7 +19,7 @@ int _strlen(char *s)
 	return (a);
 }
 
-#include <stdio.h>
+#include "2-str_concat.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -34,28 +34,44 @@ int _strlen(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	char *concatenated;
-	size_t len1, len2, len_total;
-	size_t i, j;
+	int i = 0, j = 0, k =0, l =0;
+	char *s;
 
 	if (s1 == NULL)
 		s1 = "";
-	if (s1 == NULL)
-		s1 = "";
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
+	if (s2 == NULL)
+		s2 = "";
 
-	len_total = len1 + len2;
+	while (s1[i])
+		i++;
 
-	concatenated = malloc((len_total + 1) * sizeof(char));
+	while (s2[j])
+		j++;
 
-	for (i = 0; i < len1; i++)
-		concatenated[i] = s1[i];
-	for (j = 0; j < len2; j++, i++)
-		concatenated[i] = s2[j];
+	l = i + j;
+	s = malloc((sizeof(char) * l) + 1);
 
-	concatenated[len_total] = '\0';
+	if (s == NULL)
+		return (NULL);
 
-	return (concatenated);
+	j = 0;
+
+	while (k < l)
+	{
+		if (k <= i)
+			s[k] = s1[k];
+
+		if (k >= i)
+		{
+			s[k] = s1[k];
+			j++;
+		}
+
+		k++;
+	}
+
+	s[k] = '\0';
+	return (s);
+
 }
