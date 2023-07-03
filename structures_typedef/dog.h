@@ -1,3 +1,4 @@
+#ifndef DOG_H
 #define DOG_H
 
 /**
@@ -9,15 +10,16 @@
  * Description: Longer description
  */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 
 	float age;
 
 	char *owner;
-};
-typedef struct dog dog_t;
+}
+
+dog_t;
 
 void int_dog(struct dog *d, char *name, float age, char *owner);
 
@@ -31,5 +33,4 @@ char *_strcpy(char *dest, char *src);
 
 int _strlen(char *s);
 
-#if defined(__GNUC__) && defined(__linux__)
-#endif
+#endif /* DOG_H */
