@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+typedef struct dog
+{
+	char name[100];
+	float age;
+	char owner[100];
+}
+
+dog_t;
+
+int main(void)
+{
+	dog_t my_dog;
+
+	strcpy(my_dog.name, "Poppy");
+	my_dog.age = 3.5;
+	strcpy(my_dog.owner, "Bob");
+
+	printf("My name is %s, and I am %.1f :) _ Woof!\n", my_dog.name, my_dog.age);
+
+	return (0);
+}
