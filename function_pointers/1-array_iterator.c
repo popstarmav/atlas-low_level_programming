@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * array_iterator - Applies a given function to each alement of an array
- * @array: Pointer to the array
- * @size: Size of the array
- * @action: Pointer to the function to be applied
+ * array_iterator - prints each array elem on a new line
+ * @array: array
+ * @size: how many elem to print
+ * @action: pointer to point in regular or hex
  * Return: void
  */
 
