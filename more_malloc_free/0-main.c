@@ -1,5 +1,7 @@
-#include <stdlib.h>
+#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
 
 /**
  * main - check the code
@@ -13,13 +15,13 @@ int main(void)
     float *f;
     double *d;
 
-    c = malloc(sizeof(char) * 1024);
+    c = malloc_checked(sizeof(char) * 1024);
     printf("%p\n", (void *)c);
-    i = malloc(sizeof(int) * 402);
+    i = malloc_checked(sizeof(int) * 402);
     printf("%p\n", (void *)i);
-    f = malloc(sizeof(float) * 100000000);
+    f = malloc_checked(sizeof(float) * 100000000);
     printf("%p\n", (void *)f);
-    d = malloc(sizeof(double) * 100);
+    d = malloc_checked(INT_MAX);
     printf("%p\n", (void *)d);
     free(c);
     free(i);
@@ -27,4 +29,3 @@ int main(void)
     free(d);
     return (0);
 }
-
