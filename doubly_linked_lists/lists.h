@@ -1,5 +1,6 @@
 #ifndef LIST_h
 #define LIST_H
+#include <stddef.h>
 
 /**
  * struct dlistint_s - doubly linked list
