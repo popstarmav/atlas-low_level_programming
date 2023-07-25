@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include "lists.h"
 
-/**free_dlistint - frees a dlistint_t list.
+/**
+ * free_dlistint - frees a dlistint_t list.
  * @head: pointer to head of the list
  * Return: nothing
  **/
@@ -13,6 +14,6 @@ void free_dlistint(dlistint_t *head)
 	{
 		current = head;
 		head = head->next;
-		free (current);
+		free(current);
 	}
 }
