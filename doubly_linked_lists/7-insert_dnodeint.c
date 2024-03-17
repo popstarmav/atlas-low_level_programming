@@ -3,10 +3,11 @@
 #include "lists.h"
 
 /**
-* Inserts a new node with value n at index idx in a dlistint_t list.
-* 
-* @h: A pointer to the head of the dlistint_t list.
+* insert_dnodeint_at_index - Inserts a new node at a given postion
+*
+* @h: A pointer to a pointer the head of the dlistint_t list.
 * @idx: the index to insert the new node.
+* @n: The Integar value to be stored in the new node.
 *
 * Return: A pointer to the new node, or NULL on failure.
 */
