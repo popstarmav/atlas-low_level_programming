@@ -1,6 +1,8 @@
 #ifndef HASH_TABLE_H
 #define HASH_TABLE_H
 
+#define TABLE_SIZE 100
+
 /**
  * struct hash_node_s - Node of a hash table
  *
