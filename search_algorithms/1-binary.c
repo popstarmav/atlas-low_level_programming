@@ -7,8 +7,7 @@ int binary_search(int *array, size_t size, int value)
 	
 	if (array == NULL) 
 	{
-		printf("Array is NULL\n");
-		return -1;
+		return (-1);
 	}
 	
 	left = 0;
