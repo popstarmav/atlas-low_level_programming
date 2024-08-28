@@ -1,0 +1,34 @@
+# 3-Makefile
+
+# Variables
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+
+# The all rule builds the executable
+all: $(NAME)
+
+# Rule to build the executable
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Rule to compile .c files into .o files
+%.o: %.c
+	$(CC) -c $< -o $@
+
+# Clean up Emacs and Vim temporary files along with the executable
+clean:
+	$(RM) *~ $(NAME)
+
+# Delete object files
+oclean:
+	$(RM) $(OBJ)
+
+# Delete all temporary files, object files, and the executable
+fclean: clean oclean
+
+# Force recompilation of all source files
+re: fclean all
+
