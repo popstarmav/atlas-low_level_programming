@@ -1,0 +1,15 @@
+# 1-Makefile
+
+# Variables
+CC = gcc
+SRC = main.c school.c
+
+# The name of the executable
+NAME = school
+
+# The all rule builds the executable
+all: $(NAME)
+
+$(NAME): $(SRC)
+	$(CC) $(SRC) -o $(NAME)
+
