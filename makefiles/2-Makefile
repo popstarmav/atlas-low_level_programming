@@ -1,0 +1,26 @@
+# 2-Makefile
+
+# Variables
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+# The all rule builds the executable
+all: $(NAME)
+
+# Rule to build the executable
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Rule to compile .c files into .o files
+%.o: %.c
+	$(CC) -c $< -o $@
+
+# Clean up build artifacts
+clean:
+	rm -f $(OBJ)
+
+# Force recompilation of everything
+re: clean all
+
